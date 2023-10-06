@@ -1,4 +1,5 @@
 :root {
+  --color-grandis: #ffd68b;
   --color-white-rock: #e5e3cb;
   --color-faded-jade: #428b8b;
   --color-salmon: #fd926a;
@@ -10,11 +11,62 @@
   --color-gray-light: #f0f0f0;
   --font-family-content: "Mukta", sans-serif;
   --font-family-title: "Glory", sans-serif;
+  --font-size-title: 48px;
+  --font-size-text: 20px;
 }
 
 body {
   background: var(--color-white-rock);
+  margin: 0;
+  padding: 0;
 }
+
+/* TODO: EL CONTENIDO DE LA SECCION HOME, CUANDO HAYA QUE MERGEAR */
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 50%), rgb(255 255 255 / 50%)), url("./assets/home.jpg");
+  background-size: cover;
+  background-position: center;
+
+  & .wrap-texto {
+    color: #fff;
+    text-align: center;
+    width: 50%;
+
+    & .title-home {
+      color: var(--color-ferra);
+      font-family: var(--font-family-title);
+      font-size: var(--font-size-title);
+      font-weight: bold;
+    }
+
+    & .text-home {
+      color: var(--color-ferra);
+      font-family: var(--font-family-title);
+      font-size: var(--font-size-text);
+      font-weight: bold;
+    }
+
+    & .button-home {
+      background-color: var(--color-grandis);
+      border-radius: 25px;
+      padding: 10px;
+      box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+      font-family: var(--font-family-title);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+/* TODO: HASTA AQUI EL CONTENIDO DE HOME */
 
 /* TODO: EL CONTENIDO DE LA SECCION INFO, CUANDO HAYA QUE MERGEAR */
 
