@@ -1,13 +1,19 @@
 :root {
-  --background-color: #e5e3cb;
-  --font-color: #5c4943;
-  --font-color2: #428b8b;
+  --color-white-rock: #e5e3cb;
+  --color-faded-jade: #428b8b;
+  --color-salmon: #fd926a;
+  --color-thunderbird: #cd391b;
+  --color-ferra: #5c4943;
+  --color-grandis: #ffd68b;
+  --color-white: #fff;
+  --color-gray: #e2e2e2;
+  --color-gray-light: #f0f0f0;
   --font-family-content: "Mukta", sans-serif;
   --font-family-title: "Glory", sans-serif;
 }
 
 body {
-  background: var(--background-color);
+  background: var(--color-white-rock);
 }
 
 /* TODO: EL CONTENIDO DE LA SECCION INFO, CUANDO HAYA QUE MERGEAR */
@@ -18,7 +24,7 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 50px;
-  color: var(--font-color);
+  color: var(--color-ferra);
 
   & .info-title-text {
     font-family: var(--font-family-title);
@@ -42,13 +48,13 @@ body {
   height: 100%;
   margin-top: 50px;
   padding: 10px;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 10px;
   font-family: var(--font-family-content);
 }
 
 .card-image {
-  background: rgb(255 255 255);
+  background: var(--color-white);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 10px 20px 0 10px;
@@ -83,7 +89,7 @@ body {
 .nutritional-info-container {
   display: flex;
   flex-direction: row;
-  background: rgb(240 240 240);
+  background: var(--color-gray-light);
   width: 100%;
 
   & .kcal-box {
@@ -91,8 +97,8 @@ body {
     justify-content: center;
     width: 150px;
     margin: 10px;
-    background: rgb(226 226 226);
-    color: var(--font-color);
+    background: var(--color-gray);
+    color: var(--color-ferra);
 
     & span {
       justify-self: center;
@@ -120,3 +126,28 @@ body {
 }
 
 /* TODO: HASTA AQUI EL CONTENIDO DE INFO */
+
+/* Pantallas pequeñas (teléfonos) XS */
+@media screen and (width <= 767px) {
+  /* Estilos para pantallas pequeñas */
+}
+
+/* Pantallas medianas (tabletas pequeñas y algunos ordenadores portátiles) SM */
+@media screen and (width >= 768px) and (width <= 1023px) {
+  /* Estilos para pantallas medianas */
+}
+
+/* Pantallas grandes (ordenadores de escritorio) MD */
+@media screen and (width >= 1024px) {
+  /* Estilos para pantallas grandes */
+}
+
+/* Pantallas extra grandes (monitores grandes) LG */
+@media screen and (width >= 1200px) {
+  /* Estilos para pantallas extra grandes */
+}
+
+/* Pantallas 4K y superiores (resoluciones ultra altas) XL */
+@media screen and (width >= 2560px) {
+  /* Estilos para pantallas 4K y superiores */
+}
