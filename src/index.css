@@ -108,6 +108,7 @@ body {
         color: var(--color-ferra);
         padding: 5px 20px;
         border-radius: 25px;
+        text-wrap: nowrap;
 
         &:hover {
           background-color: var(--color-salmon);
@@ -156,6 +157,29 @@ body {
 
   &:checked ~ label span:nth-child(3) {
     transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+@media screen and (width >= 768px) {
+  .header-container {
+    padding: 10px 30px;
+
+    & .company-name {
+      font-size: var(--font-size-lg);
+      padding: 0 30px;
+    }
+
+    & .icon-bars {
+      display: none;
+    }
+
+    & .navbar-list {
+      position: initial;
+      display: flex;
+      align-items: center;
+      max-height: 100%;
+      font-size: var(--font-size-sm);
+    }
   }
 }
 
@@ -274,26 +298,7 @@ body {
 
 /* Pantallas medianas (tabletas pequeñas y algunos ordenadores portátiles) SM */
 @media screen and (width >= 768px) {
-  .header-container {
-    padding: 10px 30px;
-
-    & .company-name {
-      font-size: var(--font-size-lg);
-      padding: 0 30px;
-    }
-
-    & .icon-bars {
-      display: none;
-    }
-
-    & .navbar-list {
-      position: initial;
-      display: flex;
-      align-items: center;
-      max-height: 100%;
-      font-size: var(--font-size-sm);
-    }
-  }
+  /* Estilos para pantallas pequeñas */
 }
 
 /* Pantallas grandes (ordenadores de escritorio) MD */
