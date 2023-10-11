@@ -3,14 +3,10 @@ import "./index.css";
 const slider = document.getElementById("slider");
 const buttonLeft = document.getElementById("button-left");
 const buttonRight = document.getElementById("button-right");
-
 const sliderElements = document.querySelectorAll(".slider__element");
-
 const rootStyles = document.documentElement.style;
-
 let slideCounter = 0;
 let isInTransition = false;
-
 const DIRECTION = {
   RIGHT: "RIGHT",
   LEFT: "LEFT"
@@ -61,9 +57,22 @@ const moveSlide = direction => {
   }
 };
 
+const autoAdvance = () => {
+  moveSlide(DIRECTION.RIGHT);
+};
+
 buttonRight.addEventListener("click", () => moveSlide(DIRECTION.RIGHT));
 buttonLeft.addEventListener("click", () => moveSlide(DIRECTION.LEFT));
 
 slider.addEventListener("transitionend", reorderSlide);
+
+const interval = setInterval(autoAdvance, 3000);
+
+buttonRight.addEventListener("click", () => {
+  clearInterval(interval);
+});
+buttonLeft.addEventListener("click", () => {
+  clearInterval(interval);
+});
 
 reorderSlide();
