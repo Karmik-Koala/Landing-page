@@ -229,6 +229,60 @@ body {
     }
   }
 }
+
+/*Comienza el contenido de Cards*/
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  color: var(--color-ferra);
+
+  & .cards-title-text {
+    font-family: var(--font-family-title);
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  & .cards-description {
+    margin: auto;
+    width: 50%;
+    font-family: var(--font-family-title);
+    font-size: 30px;
+  }
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px;
+  margin-top: 50px;
+}
+
+.cards-square {
+  width: 30%;
+  padding: 10px;
+  background-color: #428B8B;
+  border-radius: 10px;
+  text-align: center;
+  & .cards-text-title2 {
+    font-family: var(--font-family-title);
+    font-size: 25px;
+    font-weight: bold;
+    color:#ffd68b;
+  }
+  & .cards-text-body {
+    margin: auto;
+    width: 90%;
+    font-family: var(--font-family-content);
+    font-size: 20px;
+    color:#ffd68b;
+  }
+}
+
+/*Acaba el contenido de Cards*/
+
 /* TODO: EL CONTENIDO DE LA SECCION INFO, CUANDO HAYA QUE MERGEAR */
 
 .info-container {
