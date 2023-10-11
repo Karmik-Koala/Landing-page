@@ -16,8 +16,8 @@
   --font-size-ns: 1.5rem;
   --font-size-normal: 1.8rem;
   --font-size-nl: 2rem;
-  --font-size-lg: 2.5rem;
-  --font-size-xl: 3rem;
+  --font-size-lg: 3rem;
+  --font-size-xl: 5rem;
   --slide-transform: 0;
   --slider-size: 500px;
   --transition: transform 1s;
@@ -46,7 +46,7 @@ body {
 }
 
 .header-container {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 5;
   width: 100%;
@@ -109,22 +109,23 @@ body {
           left: 0;
         }
       }
-
-      & .button-go-app {
-        font-family: var(--font-family-content);
-        background-color: var(--color-grandis);
-        color: var(--color-ferra);
-        padding: 5px 20px;
-        border-radius: 25px;
-        text-wrap: nowrap;
-
-        &:hover {
-          background-color: var(--color-salmon);
-          color: var(--color-white);
-          transition: all 0.3s ease 0s, left 0.3s ease 0s;
-        }
-      }
     }
+  }
+}
+
+.button-go-app {
+  font-family: var(--font-family-content);
+  background-color: var(--color-grandis);
+  color: var(--color-ferra);
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 25px;
+  text-wrap: nowrap;
+
+  &:hover {
+    background-color: var(--color-salmon);
+    color: var(--color-white);
+    transition: all 0.3s ease 0s, left 0.3s ease 0s;
   }
 }
 
@@ -191,9 +192,14 @@ body {
   }
 }
 
+@media screen and (width >= 2560px) {
+  .header-container .navbar-list {
+    font-size: var(--font-size-ns);
+  }
+}
+
 /* TODO : FIN NAVBAR */
 .wrap {
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -201,23 +207,27 @@ body {
   background: linear-gradient(to bottom, rgb(255 255 255 / 50%), rgb(255 255 255 / 50%)), url("./assets/home.jpg");
   background-size: cover;
   background-position: center;
+  padding: 40px;
 
-  & .wrap-texto {
-    color: #fff;
+  & .wrap-text {
     text-align: center;
-    width: 50%;
+    text-shadow: 0 0 2px rgb(255 255 255 / 60%);
+
+    /* width: 50%; */
 
     & .title-home {
+      padding: 30px 0;
       color: var(--color-ferra);
       font-family: var(--font-family-title);
-      font-size: var(--font-size-title);
+      font-size: var(--font-size-lg);
       font-weight: bold;
     }
 
     & .text-home {
+      padding: 0 0 30px;
       color: var(--color-ferra);
       font-family: var(--font-family-title);
-      font-size: var(--font-size-text);
+      font-size: var(--font-size-ns);
       font-weight: bold;
     }
 
@@ -231,6 +241,29 @@ body {
       font-weight: 400;
       font-size: 16px;
       line-height: 18px;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .wrap .wrap-text {
+    width: 60%;
+  }
+}
+
+@media screen and (width >= 2560px) {
+  /* Estilos para pantallas 4K y superiores */
+  .wrap .wrap-text {
+    & .title-home {
+      font-size: var(--font-size-xl);
+    }
+
+    & .text-home {
+      font-size: var(--font-size-lg);
+    }
+
+    .button-go-app {
+      font-size: var(--font-size-normal);
     }
   }
 }
