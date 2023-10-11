@@ -275,49 +275,79 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 50px;
+  padding: 40px;
   color: var(--color-ferra);
 
   & .cards-title-text {
     font-family: var(--font-family-title);
-    font-size: 45px;
+    font-size: var(--font-size-nl);
     font-weight: bold;
+    padding: 15px 0;
   }
 
   & .cards-description {
-    margin: auto;
-    width: 50%;
     font-family: var(--font-family-title);
-    font-size: 30px;
+    font-size: var(--font-size-md);
   }
 }
 
 .cards-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 200px;
-  margin-top: 50px;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  & .cards-square {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: var(--color-faded-jade);
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+
+    & .cards-text-title {
+      font-family: var(--font-family-title);
+      font-size: var(--font-size-md);
+      font-weight: bold;
+      color: var(--color-grandis);
+      margin-bottom: 20px;
+    }
+
+    & .cards-text-body {
+      font-family: var(--font-family-content);
+      font-size: var(--font-size-sm);
+      color: var(--color-grandis);
+    }
+  }
 }
 
-.cards-square {
-  width: 30%;
-  padding: 10px;
-  background-color: #428b8b;
-  border-radius: 10px;
-  text-align: center;
-
-  & .cards-text-title2 {
-    font-family: var(--font-family-title);
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffd68b;
+@media screen and (width >= 768px) {
+  .cards-container {
+    padding: 40px 50px;
   }
 
-  & .cards-text-body {
+  .cards-square {
     margin: auto;
-    width: 90%;
-    font-family: var(--font-family-content);
-    font-size: 20px;
-    color: #ffd68b;
+    max-width: 400px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    padding: 40px 100px;
+  }
+
+  .cards-square {
+    margin: auto;
+    max-width: 300px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .cards-container {
+    padding: 40px 200px;
   }
 }
 
