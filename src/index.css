@@ -193,6 +193,15 @@ body {
 
 /* TODO : FIN NAVBAR */
 .wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 50%), rgb(255 255 255 / 50%)), url("./assets/home.jpg");
+  background-size: cover;
+  background-position: center;
+
   & .wrap-texto {
     color: #fff;
     text-align: center;
